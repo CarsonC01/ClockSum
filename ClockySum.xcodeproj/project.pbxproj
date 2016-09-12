@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893AFC1D864B73006F309C /* AppDelegate.swift */; };
+		1D893AFF1D864B73006F309C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893AFE1D864B73006F309C /* ViewController.swift */; };
+		1D893B021D864B73006F309C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B001D864B73006F309C /* Main.storyboard */; };
+		1D893B041D864B73006F309C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B031D864B73006F309C /* Assets.xcassets */; };
+		1D893B071D864B73006F309C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B051D864B73006F309C /* LaunchScreen.storyboard */; };
+		1D893B121D864B73006F309C /* ClockySumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B111D864B73006F309C /* ClockySumTests.swift */; };
+		1D893B1D1D864B73006F309C /* ClockySumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B1C1D864B73006F309C /* ClockySumUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D893B0E1D864B73006F309C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D893AF11D864B73006F309C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D893AF81D864B73006F309C;
+			remoteInfo = ClockySum;
+		};
+		1D893B191D864B73006F309C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D893AF11D864B73006F309C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D893AF81D864B73006F309C;
+			remoteInfo = ClockySum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D893AF91D864B73006F309C /* ClockySum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockySum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D893AFC1D864B73006F309C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D893AFE1D864B73006F309C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D893B011D864B73006F309C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D893B031D864B73006F309C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D893B061D864B73006F309C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D893B081D864B73006F309C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D893B0D1D864B73006F309C /* ClockySumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockySumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D893B111D864B73006F309C /* ClockySumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockySumTests.swift; sourceTree = "<group>"; };
+		1D893B131D864B73006F309C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D893B181D864B73006F309C /* ClockySumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockySumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D893B1C1D864B73006F309C /* ClockySumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockySumUITests.swift; sourceTree = "<group>"; };
+		1D893B1E1D864B73006F309C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D893AF61D864B73006F309C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D893B0A1D864B73006F309C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D893B151D864B73006F309C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D893AF01D864B73006F309C = {
+			isa = PBXGroup;
+			children = (
+				1D893AFB1D864B73006F309C /* ClockySum */,
+				1D893B101D864B73006F309C /* ClockySumTests */,
+				1D893B1B1D864B73006F309C /* ClockySumUITests */,
+				1D893AFA1D864B73006F309C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D893AFA1D864B73006F309C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D893AF91D864B73006F309C /* ClockySum.app */,
+				1D893B0D1D864B73006F309C /* ClockySumTests.xctest */,
+				1D893B181D864B73006F309C /* ClockySumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D893AFB1D864B73006F309C /* ClockySum */ = {
+			isa = PBXGroup;
+			children = (
+				1D893AFC1D864B73006F309C /* AppDelegate.swift */,
+				1D893AFE1D864B73006F309C /* ViewController.swift */,
+				1D893B001D864B73006F309C /* Main.storyboard */,
+				1D893B031D864B73006F309C /* Assets.xcassets */,
+				1D893B051D864B73006F309C /* LaunchScreen.storyboard */,
+				1D893B081D864B73006F309C /* Info.plist */,
+			);
+			path = ClockySum;
+			sourceTree = "<group>";
+		};
+		1D893B101D864B73006F309C /* ClockySumTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D893B111D864B73006F309C /* ClockySumTests.swift */,
+				1D893B131D864B73006F309C /* Info.plist */,
+			);
+			path = ClockySumTests;
+			sourceTree = "<group>";
+		};
+		1D893B1B1D864B73006F309C /* ClockySumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D893B1C1D864B73006F309C /* ClockySumUITests.swift */,
+				1D893B1E1D864B73006F309C /* Info.plist */,
+			);
+			path = ClockySumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D893AF81D864B73006F309C /* ClockySum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D893B211D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySum" */;
+			buildPhases = (
+				1D893AF51D864B73006F309C /* Sources */,
+				1D893AF61D864B73006F309C /* Frameworks */,
+				1D893AF71D864B73006F309C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClockySum;
+			productName = ClockySum;
+			productReference = 1D893AF91D864B73006F309C /* ClockySum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D893B0C1D864B73006F309C /* ClockySumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D893B241D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySumTests" */;
+			buildPhases = (
+				1D893B091D864B73006F309C /* Sources */,
+				1D893B0A1D864B73006F309C /* Frameworks */,
+				1D893B0B1D864B73006F309C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D893B0F1D864B73006F309C /* PBXTargetDependency */,
+			);
+			name = ClockySumTests;
+			productName = ClockySumTests;
+			productReference = 1D893B0D1D864B73006F309C /* ClockySumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D893B171D864B73006F309C /* ClockySumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D893B271D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySumUITests" */;
+			buildPhases = (
+				1D893B141D864B73006F309C /* Sources */,
+				1D893B151D864B73006F309C /* Frameworks */,
+				1D893B161D864B73006F309C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D893B1A1D864B73006F309C /* PBXTargetDependency */,
+			);
+			name = ClockySumUITests;
+			productName = ClockySumUITests;
+			productReference = 1D893B181D864B73006F309C /* ClockySumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D893AF11D864B73006F309C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Carson Carbery";
+				TargetAttributes = {
+					1D893AF81D864B73006F309C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					1D893B0C1D864B73006F309C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1D893AF81D864B73006F309C;
+					};
+					1D893B171D864B73006F309C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1D893AF81D864B73006F309C;
+					};
+				};
+			};
+			buildConfigurationList = 1D893AF41D864B73006F309C /* Build configuration list for PBXProject "ClockySum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D893AF01D864B73006F309C;
+			productRefGroup = 1D893AFA1D864B73006F309C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D893AF81D864B73006F309C /* ClockySum */,
+				1D893B0C1D864B73006F309C /* ClockySumTests */,
+				1D893B171D864B73006F309C /* ClockySumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D893AF71D864B73006F309C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D893B071D864B73006F309C /* LaunchScreen.storyboard in Resources */,
+				1D893B041D864B73006F309C /* Assets.xcassets in Resources */,
+				1D893B021D864B73006F309C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D893B0B1D864B73006F309C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D893B161D864B73006F309C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D893AF51D864B73006F309C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D893AFF1D864B73006F309C /* ViewController.swift in Sources */,
+				1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D893B091D864B73006F309C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D893B121D864B73006F309C /* ClockySumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D893B141D864B73006F309C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D893B1D1D864B73006F309C /* ClockySumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D893B0F1D864B73006F309C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D893AF81D864B73006F309C /* ClockySum */;
+			targetProxy = 1D893B0E1D864B73006F309C /* PBXContainerItemProxy */;
+		};
+		1D893B1A1D864B73006F309C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D893AF81D864B73006F309C /* ClockySum */;
+			targetProxy = 1D893B191D864B73006F309C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D893B001D864B73006F309C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D893B011D864B73006F309C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D893B051D864B73006F309C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D893B061D864B73006F309C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D893B1F1D864B73006F309C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D893B201D864B73006F309C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D893B221D864B73006F309C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ClockySum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1D893B231D864B73006F309C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ClockySum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1D893B251D864B73006F309C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClockySumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockySum.app/ClockySum";
+			};
+			name = Debug;
+		};
+		1D893B261D864B73006F309C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClockySumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockySum.app/ClockySum";
+			};
+			name = Release;
+		};
+		1D893B281D864B73006F309C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ClockySumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ClockySum;
+			};
+			name = Debug;
+		};
+		1D893B291D864B73006F309C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ClockySumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ClockySum;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D893AF41D864B73006F309C /* Build configuration list for PBXProject "ClockySum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D893B1F1D864B73006F309C /* Debug */,
+				1D893B201D864B73006F309C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D893B211D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D893B221D864B73006F309C /* Debug */,
+				1D893B231D864B73006F309C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D893B241D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D893B251D864B73006F309C /* Debug */,
+				1D893B261D864B73006F309C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D893B271D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D893B281D864B73006F309C /* Debug */,
+				1D893B291D864B73006F309C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D893AF11D864B73006F309C /* Project object */;
+}
