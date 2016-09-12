@@ -14,6 +14,7 @@
 		1D893B071D864B73006F309C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B051D864B73006F309C /* LaunchScreen.storyboard */; };
 		1D893B121D864B73006F309C /* ClockySumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B111D864B73006F309C /* ClockySumTests.swift */; };
 		1D893B1D1D864B73006F309C /* ClockySumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B1C1D864B73006F309C /* ClockySumUITests.swift */; };
+		1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1D893B181D864B73006F309C /* ClockySumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockySumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D893B1C1D864B73006F309C /* ClockySumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockySumUITests.swift; sourceTree = "<group>"; };
 		1D893B1E1D864B73006F309C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockSumFaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				1D893AFC1D864B73006F309C /* AppDelegate.swift */,
 				1D893AFE1D864B73006F309C /* ViewController.swift */,
+				1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */,
 				1D893B001D864B73006F309C /* Main.storyboard */,
 				1D893B031D864B73006F309C /* Assets.xcassets */,
 				1D893B051D864B73006F309C /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */,
 				1D893AFF1D864B73006F309C /* ViewController.swift in Sources */,
 				1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */,
 			);
