@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D55BC971DD43D2200F1272C /* iPhoneSE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */; };
 		1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893AFC1D864B73006F309C /* AppDelegate.swift */; };
-		1D893AFF1D864B73006F309C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893AFE1D864B73006F309C /* ViewController.swift */; };
 		1D893B021D864B73006F309C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B001D864B73006F309C /* Main.storyboard */; };
 		1D893B041D864B73006F309C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B031D864B73006F309C /* Assets.xcassets */; };
 		1D893B071D864B73006F309C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B051D864B73006F309C /* LaunchScreen.storyboard */; };
 		1D893B121D864B73006F309C /* ClockySumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B111D864B73006F309C /* ClockySumTests.swift */; };
 		1D893B1D1D864B73006F309C /* ClockySumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B1C1D864B73006F309C /* ClockySumUITests.swift */; };
 		1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */; };
+		1D893B2D1D880182006F309C /* ClockySumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B2C1D880182006F309C /* ClockySumModel.swift */; };
+		1D9B91AB1DC7384F00894A42 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B91AA1DC7384F00894A42 /* SettingsViewController.swift */; };
+		1DFFE3911DD40E5900673739 /* InnerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFE3901DD40E5900673739 /* InnerShadowView.swift */; };
+		1DFFE3931DD40F7F00673739 /* InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFE3921DD40F7F00673739 /* InnerShadow.swift */; };
+		46489F58B702CEB3EFBAFB89 /* Pods_ClockySum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F9FA36C48D49CDA09F80E /* Pods_ClockySum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneSE.storyboard; sourceTree = "<group>"; };
 		1D893AF91D864B73006F309C /* ClockySum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockySum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D893AFC1D864B73006F309C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D893AFE1D864B73006F309C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D893B011D864B73006F309C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D893B031D864B73006F309C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D893B061D864B73006F309C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		1D893B1C1D864B73006F309C /* ClockySumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockySumUITests.swift; sourceTree = "<group>"; };
 		1D893B1E1D864B73006F309C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockSumFaceViewController.swift; sourceTree = "<group>"; };
+		1D893B2C1D880182006F309C /* ClockySumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockySumModel.swift; sourceTree = "<group>"; };
+		1D9B91AA1DC7384F00894A42 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1DFFE3901DD40E5900673739 /* InnerShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerShadowView.swift; sourceTree = "<group>"; };
+		1DFFE3921DD40F7F00673739 /* InnerShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerShadow.swift; sourceTree = "<group>"; };
+		3C5AE43A53C35526E061E4C5 /* Pods-ClockySum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClockySum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClockySum/Pods-ClockySum.debug.xcconfig"; sourceTree = "<group>"; };
+		768BA1607A97C0DAFF24BE19 /* Pods-ClockySum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClockySum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClockySum/Pods-ClockySum.release.xcconfig"; sourceTree = "<group>"; };
+		848F9FA36C48D49CDA09F80E /* Pods_ClockySum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClockySum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46489F58B702CEB3EFBAFB89 /* Pods_ClockySum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +89,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4F6AA61DEE6ED2000DD736 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D893B2C1D880182006F309C /* ClockySumModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1D4F6AA71DEE6EDB000DD736 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */,
+				1D9B91AA1DC7384F00894A42 /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1D4F6AA81DEE6EF8000DD736 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */,
+				1D893B001D864B73006F309C /* Main.storyboard */,
+				1D893B051D864B73006F309C /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1D4F6AA91DEE6F65000DD736 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D893AFC1D864B73006F309C /* AppDelegate.swift */,
+				1D893B031D864B73006F309C /* Assets.xcassets */,
+				1D893B081D864B73006F309C /* Info.plist */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		1D893AF01D864B73006F309C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +133,8 @@
 				1D893B101D864B73006F309C /* ClockySumTests */,
 				1D893B1B1D864B73006F309C /* ClockySumUITests */,
 				1D893AFA1D864B73006F309C /* Products */,
+				44C156569E2181A00F68F99E /* Pods */,
+				2AECAD1751149B35B065E3E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +151,12 @@
 		1D893AFB1D864B73006F309C /* ClockySum */ = {
 			isa = PBXGroup;
 			children = (
-				1D893AFC1D864B73006F309C /* AppDelegate.swift */,
-				1D893AFE1D864B73006F309C /* ViewController.swift */,
-				1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */,
-				1D893B001D864B73006F309C /* Main.storyboard */,
-				1D893B031D864B73006F309C /* Assets.xcassets */,
-				1D893B051D864B73006F309C /* LaunchScreen.storyboard */,
-				1D893B081D864B73006F309C /* Info.plist */,
+				1D4F6AA61DEE6ED2000DD736 /* Models */,
+				1D4F6AA81DEE6EF8000DD736 /* Views */,
+				1D4F6AA71DEE6EDB000DD736 /* Controllers */,
+				1D4F6AA91DEE6F65000DD736 /* Utilities */,
+				1DFFE3901DD40E5900673739 /* InnerShadowView.swift */,
+				1DFFE3921DD40F7F00673739 /* InnerShadow.swift */,
 			);
 			path = ClockySum;
 			sourceTree = "<group>";
@@ -128,6 +179,23 @@
 			path = ClockySumUITests;
 			sourceTree = "<group>";
 		};
+		2AECAD1751149B35B065E3E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				848F9FA36C48D49CDA09F80E /* Pods_ClockySum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44C156569E2181A00F68F99E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C5AE43A53C35526E061E4C5 /* Pods-ClockySum.debug.xcconfig */,
+				768BA1607A97C0DAFF24BE19 /* Pods-ClockySum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D893B211D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySum" */;
 			buildPhases = (
+				9D55A8808BEF73DD0DEE8BC8 /* [CP] Check Pods Manifest.lock */,
 				1D893AF51D864B73006F309C /* Sources */,
 				1D893AF61D864B73006F309C /* Frameworks */,
 				1D893AF71D864B73006F309C /* Resources */,
+				E2813311C6405422B5F65DEC /* [CP] Embed Pods Frameworks */,
+				36180DF8327B567C37E80B2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,13 +267,17 @@
 				TargetAttributes = {
 					1D893AF81D864B73006F309C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5ZYKCXQGR3;
+						LastSwiftMigration = 0800;
 					};
 					1D893B0C1D864B73006F309C = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1D893AF81D864B73006F309C;
 					};
 					1D893B171D864B73006F309C = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1D893AF81D864B73006F309C;
 					};
 				};
@@ -233,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D893B071D864B73006F309C /* LaunchScreen.storyboard in Resources */,
+				1D55BC971DD43D2200F1272C /* iPhoneSE.storyboard in Resources */,
 				1D893B041D864B73006F309C /* Assets.xcassets in Resources */,
 				1D893B021D864B73006F309C /* Main.storyboard in Resources */,
 			);
@@ -254,14 +330,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36180DF8327B567C37E80B2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClockySum/Pods-ClockySum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D55A8808BEF73DD0DEE8BC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2813311C6405422B5F65DEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClockySum/Pods-ClockySum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D893AF51D864B73006F309C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFFE3931DD40F7F00673739 /* InnerShadow.swift in Sources */,
 				1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */,
-				1D893AFF1D864B73006F309C /* ViewController.swift in Sources */,
+				1D893B2D1D880182006F309C /* ClockySumModel.swift in Sources */,
 				1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */,
+				1DFFE3911DD40E5900673739 /* InnerShadowView.swift in Sources */,
+				1D9B91AB1DC7384F00894A42 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,23 +528,33 @@
 		};
 		1D893B221D864B73006F309C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C5AE43A53C35526E061E4C5 /* Pods-ClockySum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5ZYKCXQGR3;
 				INFOPLIST_FILE = ClockySum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1D893B231D864B73006F309C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768BA1607A97C0DAFF24BE19 /* Pods-ClockySum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5ZYKCXQGR3;
 				INFOPLIST_FILE = ClockySum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -429,6 +566,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockySum.app/ClockySum";
 			};
 			name = Debug;
@@ -441,6 +579,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockySum.app/ClockySum";
 			};
 			name = Release;
@@ -452,6 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ClockySum;
 			};
 			name = Debug;
@@ -463,6 +603,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySumUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ClockySum;
 			};
 			name = Release;
@@ -486,6 +627,7 @@
 				1D893B231D864B73006F309C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D893B241D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySumTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +636,7 @@
 				1D893B261D864B73006F309C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D893B271D864B73006F309C /* Build configuration list for PBXNativeTarget "ClockySumUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +645,7 @@
 				1D893B291D864B73006F309C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
