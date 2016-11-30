@@ -52,13 +52,13 @@ class ClockSumFaceViewController: UIViewController {
     
     //MARK: - Properties
     var clockNumber: Int = 0
-    var numbersUsed:[Int] = []
-    var correctAnswer: Int = 0
-    var incorrectAnswer1: Int = 0
-    var incorrectAnswer2: Int = 0
+    //var numbersUsed:[Int] = []
+//    var correctAnswer: Int = 0
+//    var incorrectAnswer1: Int = 0
+//    var incorrectAnswer2: Int = 0
     var counterCorrect: Int = 0
     var counterIncorrect: Int = 0
-    
+    let clockySum = ClockySum()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,9 +111,11 @@ class ClockSumFaceViewController: UIViewController {
         
         // Check answer, show results, update counters
         
+        
+        
         if let answer = Int((sender.titleLabel??.text)!) {
             
-            if answer == correctAnswer {
+            if answer == clockySum.getCorrectAnswer(clockNumber: clockNumber) {
                 centerView.backgroundColor = UIColor.green
                 multiplierLabel.text = "Y"
                 counterCorrect += 1
@@ -131,94 +133,108 @@ class ClockSumFaceViewController: UIViewController {
     
     
     @IBAction func answerTouchUp(_ sender: AnyObject) {
-        
 
         setUpNextPlay()
-        
     }
+    
     
     func setUpNextPlay() {
         
-        let clockNumber = handleClockNumbering()
+        // Clear previous play view, get next play, show clock face and multiple choices
+        
+        // set last play clock number color to clear
+        setClockNumberColor(number: clockNumber, color: UIColor.clear)
+        
+        clockNumber = clockySum.handleClockNumbering()
+        
+        // set background color of clockface number to yellow
+        setClockNumberColor(number: clockNumber, color: UIColor.yellow)
+        
         if randomSwitch {
             multiplier = getRandomNumber(upperBound: 10, lowerBound: 2) + 1
         }
         
         multiplierLabel.text = "\(multiplier)x"
-        handleAnswers(clockNumber: clockNumber)
+        
+        // get the three multiple choice answers including the correct answer
+        let shuffledAns:[Int] = clockySum.handleAnswers(clockNumber: clockNumber)
+        
+        answerOne.setTitle(String(describing: shuffledAns[0]), for: .normal)
+        answerTwo.setTitle(String(describing: shuffledAns[1]), for: .normal)
+        answerThree.setTitle(String(describing: shuffledAns[2]), for: .normal)
 
     }
     
         
     
-    func handleClockNumbering() -> Int {
-        
-        // remove last play number color = set last play clockface number color to default
-        setClockNumberColor(number: clockNumber, color: UIColor.clear)
-        
-        // clear numbersUsed after three goes,  so can keep on playing indefinitely. Just avoids same numbers one after each other
-        if numbersUsed.count > 7 {
-            numbersUsed.removeAll()
-        }
-        
-        // get random number 1 - 12 for clock face. +1 to avoid zero numbering on clock face
-        clockNumber = getRandomNumber(upperBound: 12) + 1
-        
-        
-        // get a new number that hasn't been used before
-        while numbersUsed.contains(clockNumber) && numbersUsed.count < 12 {
-            // get random number 1 - 12 for clock face
-            clockNumber = getRandomNumber(upperBound: 12) + 1
-        }
-        
-        print(numbersUsed)
-        print(numbersUsed.count)
-        
-        
-        if numbersUsed.count < 12 {
-            // add to last numbers array for checking that number has not already been used
-            numbersUsed.append(clockNumber)
-            
-            // set background color of clockface number to yellow
-            setClockNumberColor(number: clockNumber, color: UIColor.yellow)
-            
-        }
-        
-        return clockNumber
-        
-    }
+//    func handleClockNumbering() -> Int {
+//        
+//        // remove last play number color = set last play clockface number color to default
+//        setClockNumberColor(number: clockNumber, color: UIColor.clear)
+//        
+//        // clear numbersUsed after three goes,  so can keep on playing indefinitely. Just avoids same numbers one after each other
+//        if numbersUsed.count > 7 {
+//            numbersUsed.removeAll()
+//        }
+//        
+//        // get random number 1 - 12 for clock face. +1 to avoid zero numbering on clock face
+//        clockNumber = getRandomNumber(upperBound: 12) + 1
+//        
+//        
+//        // get a new number that hasn't been used before
+//        while numbersUsed.contains(clockNumber) && numbersUsed.count < 12 {
+//            // get random number 1 - 12 for clock face
+//            clockNumber = getRandomNumber(upperBound: 12) + 1
+//        }
+//        
+//        print(numbersUsed)
+//        print(numbersUsed.count)
+//        
+//        
+//        if numbersUsed.count < 12 {
+//            // add to last numbers array for checking that number has not already been used
+//            numbersUsed.append(clockNumber)
+//            
+//            // set background color of clockface number to yellow
+//            setClockNumberColor(number: clockNumber, color: UIColor.yellow)
+//            
+//        }
+//        
+//        return clockNumber
+//        
+//    }
     
     
-    func handleAnswers(clockNumber: Int) {
-        
-        correctAnswer = clockNumber * multiplier
-        
-        // Create two incorrect answers
-        
-        incorrectAnswer1 = getRandomNumber(upperBound: correctAnswer + 8, lowerBound: correctAnswer + 2)
-        if correctAnswer > 2 {
-            incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer - 1, lowerBound: 1)
-        } else {
-            incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer + 15, lowerBound: correctAnswer + 9)
-        }
-        
-        print(correctAnswer, incorrectAnswer1, incorrectAnswer2)
-        
-        // Show Answers in random order
-        
-        // get random number from 3
-        let answersArray = [correctAnswer, incorrectAnswer1, incorrectAnswer2]
-        let shuffledAns = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: answersArray)
-        print(shuffledAns[0])
-        print(shuffledAns[1])
-        print(shuffledAns[2])
-        
-        answerOne.setTitle(String(describing: shuffledAns[0]), for: .normal)
-        answerTwo.setTitle(String(describing: shuffledAns[1]), for: .normal)
-        answerThree.setTitle(String(describing: shuffledAns[2]), for: .normal
-        )
-        
-    }
+//    func handleAnswers(clockNumber: Int) {
+//        
+//        correctAnswer = clockNumber * multiplier
+//        
+//        // Create two incorrect answers
+//        
+//        incorrectAnswer1 = getRandomNumber(upperBound: correctAnswer + 8, lowerBound: correctAnswer + 2)
+//        if correctAnswer > 2 {
+//            incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer - 1, lowerBound: 1)
+//        } else {
+//            incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer + 15, lowerBound: correctAnswer + 9)
+//        }
+//        
+//        print(correctAnswer, incorrectAnswer1, incorrectAnswer2)
+//        
+//        // Show Answers in random order
+//        
+//        // get random number from 3
+//        let answersArray = [correctAnswer, incorrectAnswer1, incorrectAnswer2]
+//        let shuffledAns = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: answersArray)
+//        print(shuffledAns[0])
+//        print(shuffledAns[1])
+//        print(shuffledAns[2])
+//        
+//        answerOne.setTitle(String(describing: shuffledAns[0]), for: .normal)
+//        answerTwo.setTitle(String(describing: shuffledAns[1]), for: .normal)
+//        answerThree.setTitle(String(describing: shuffledAns[2]), for: .normal
+//        )
+//        
+//    }
     
     
     func setClockNumberColor(number: Int, color: UIColor) {
