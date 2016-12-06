@@ -405,7 +405,11 @@
                         <outlet property="multiplierLabel" destination="DuB-Sa-IVL" id="Zge-Sc-8Gh"/>
                         <outlet property="nineOclockLabel" destination="QlZ-iT-heE" id="L7t-I0-LsL"/>
                         <outlet property="oneOclockLabel" destination="FA3-o5-7ed" id="frR-JF-9r8"/>
+                        <outlet property="outerImageHeight" destination="DVV-0g-hqD" id="1Ey-5C-yk8"/>
+                        <outlet property="outerImageWidth" destination="1aa-Ia-Z29" id="pFF-ku-IC1"/>
                         <outlet property="outerView" destination="bEk-nU-8x9" id="klV-kl-0PJ"/>
+                        <outlet property="outerViewHeight" destination="Mab-aK-dnY" id="sEY-v1-JqA"/>
+                        <outlet property="outerViewWidth" destination="Kkl-7v-P3x" id="vRr-o9-k1h"/>
                         <outlet property="resultLabel" destination="oYp-VV-yJ6" id="bqx-WC-rXy"/>
                         <outlet property="resultsView" destination="msk-dH-V3X" id="yfg-PP-el9"/>
                         <outlet property="sevenOclockLabel" destination="5Fi-pt-zdg" id="EXW-sA-42L"/>
@@ -415,11 +419,96 @@
                         <outlet property="twelveOclockLabel" destination="twb-hw-g2S" id="6vJ-I7-d53"/>
                         <outlet property="twoOclockLabel" destination="Orz-Wb-UXe" id="1t3-p7-3T3"/>
                         <segue destination="ls1-Gt-slL" kind="presentation" identifier="settingsSegue" id="VY8-Gu-SP5"/>
+                        <segue destination="SPU-JH-r1r" kind="popoverPresentation" identifier="instructionsSegue" popoverAnchorView="DuB-Sa-IVL" id="CBg-G3-ijd">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244" y="315.29235382308849"/>
+        </scene>
+        <!--Instructions View Controller-->
+        <scene sceneID="yAd-UH-Xju">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="SPU-JH-r1r" customClass="InstructionsViewController" customModule="ClockySum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="euO-MQ-0y0"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJK-Mr-Yn5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XZN-ir-nyx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-C2-6zP">
+                                <rect key="frame" x="35" y="28" width="305" height="604"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-nH-MyT">
+                                        <rect key="frame" x="25" y="16" width="255" height="28"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fs-bL-DNR">
+                                        <rect key="frame" x="25" y="547.5" width="80" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" red="0.85999177630000001" green="0.0" blue="0.0" alpha="0.99617293070000001" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="CLOSE"/>
+                                        <connections>
+                                            <action selector="closeInstructions:" destination="SPU-JH-r1r" eventType="touchUpInside" id="93V-1p-wWV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="j2t-Nk-4zC">
+                                        <rect key="frame" x="16" y="48" width="273" height="512"/>
+                                        <string key="text">You can play two games with ClockySum:
+
+1. Play using a Fixed Multiplier. Go to Settings, set the number that you would like to multiply the twelve clock face numbers by and press save. This game is best when first learning how to multiply by a new number.
+2. Play using a Random Multiplier. Go to Settings, set a range for the random multiplier and press save. ClockySum now randomly sets the central multiplier within the range you set. This game is more difficult to play than the fixed number game, and so best used when the player is already comfortable multiplying the numbers selected in the range.
+
+We recommend playing the Fixed Multiplier game using 3 different fixed central multipliers, until the player can multiply correctly 100 times with few incorrect guesses for each central multiplier. For example: x2,x3,x4. After this use the Random Multiplier game with the range set to cover those numbers (in this example 2 till 4). Play until the player can multiply correctly 100 times. Then switch back to another 3 fixed multipliers for example x5, x6, x7. Then simply repeat.
+
+Please remember to have fun, take your time and you will learn. Enjoy!
+
+
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tmV-nH-MyT" secondAttribute="trailing" constant="25" id="7cw-4T-qiH"/>
+                                    <constraint firstItem="j2t-Nk-4zC" firstAttribute="leading" secondItem="aQh-C2-6zP" secondAttribute="leading" constant="16" id="ES0-XV-cmZ"/>
+                                    <constraint firstAttribute="width" secondItem="aQh-C2-6zP" secondAttribute="height" multiplier="305:519" constant="-49.951830443159963" id="Jh0-3K-Wqo"/>
+                                    <constraint firstItem="8fs-bL-DNR" firstAttribute="leading" secondItem="aQh-C2-6zP" secondAttribute="leading" constant="25" id="MPS-Ci-Njy"/>
+                                    <constraint firstAttribute="trailing" secondItem="8fs-bL-DNR" secondAttribute="trailing" constant="200" id="X7p-1R-lBH"/>
+                                    <constraint firstItem="tmV-nH-MyT" firstAttribute="top" secondItem="aQh-C2-6zP" secondAttribute="top" constant="16" id="c8z-SF-0h0"/>
+                                    <constraint firstItem="tmV-nH-MyT" firstAttribute="leading" secondItem="aQh-C2-6zP" secondAttribute="leading" constant="25" id="cct-mi-a7X"/>
+                                    <constraint firstAttribute="bottom" secondItem="8fs-bL-DNR" secondAttribute="bottom" constant="20.5" id="diQ-Tv-zCL"/>
+                                    <constraint firstItem="8fs-bL-DNR" firstAttribute="top" secondItem="j2t-Nk-4zC" secondAttribute="bottom" constant="-12.5" id="mGk-XP-AOq"/>
+                                    <constraint firstAttribute="trailing" secondItem="j2t-Nk-4zC" secondAttribute="trailing" constant="16" id="ufW-cM-iTh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQh-C2-6zP" secondAttribute="trailing" constant="19" id="7CD-OC-RaP"/>
+                            <constraint firstItem="aQh-C2-6zP" firstAttribute="leading" secondItem="XZN-ir-nyx" secondAttribute="leadingMargin" constant="19" id="mjW-wd-SAh"/>
+                            <constraint firstItem="aQh-C2-6zP" firstAttribute="top" secondItem="euO-MQ-0y0" secondAttribute="bottom" constant="8" id="rh2-KO-kzK"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elL-JC-P0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="1048.4257871064469"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="rrc-c8-4eU">
@@ -433,111 +522,230 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIo-HK-oCj">
-                                <rect key="frame" x="17" y="102" width="341" height="61"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPw-7F-cEE" userLabel="Fixed Multiplier View">
+                                <rect key="frame" x="8" y="53" width="359" height="261"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-9W-8iK">
-                                        <rect key="frame" x="263" y="21" width="51" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="switchValueChanged:" destination="ls1-Gt-slL" eventType="valueChanged" id="pm0-xr-5Wq"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Multiplier:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hj-1A-faE">
-                                        <rect key="frame" x="8" y="13" width="191" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="Rzs-ka-T0w"/>
-                                            <constraint firstAttribute="width" constant="191" id="ctq-Xl-R9A"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Fixed Multiply " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-vT-zuE">
+                                        <rect key="frame" x="16" y="16" width="303" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Use this option to set the number in the middle of the clock face to a fixed value." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Au-uK-joh">
+                                        <rect key="frame" x="16" y="63" width="299" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Fixed Multiplier:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-Gu-Frj">
+                                        <rect key="frame" x="16" y="136" width="225" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="1hj-1A-faE" firstAttribute="leading" secondItem="uIo-HK-oCj" secondAttribute="leading" constant="8" id="Bmc-zB-9Mp"/>
-                                    <constraint firstItem="1hj-1A-faE" firstAttribute="top" secondItem="uIo-HK-oCj" secondAttribute="top" constant="13" id="qOb-Mg-PrY"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4Y-ul-Wwa">
-                                <rect key="frame" x="106.5" y="382" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.85882352939999995" green="0.066666666669999999" blue="0.015686274510000001" alpha="0.99617293070000001" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="162" id="e8n-hd-53D"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="SAVE"/>
-                                <connections>
-                                    <action selector="saveSettingsAction:" destination="ls1-Gt-slL" eventType="touchUpInside" id="VUX-w3-7NK"/>
-                                </connections>
-                            </button>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-FQ-yV3">
-                                <rect key="frame" x="17" y="196" width="341" height="85"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Fixed Multiplier:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-Gu-Frj">
-                                        <rect key="frame" x="8" y="22" width="176" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="176" id="M5E-ak-6Ev"/>
-                                            <constraint firstAttribute="height" constant="36" id="hLK-EJ-DAN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="uKR-b1-DKw">
-                                        <rect key="frame" x="226" y="28" width="94" height="29"/>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="uKR-b1-DKw">
+                                        <rect key="frame" x="16" y="174" width="94" height="29"/>
+                                        <color key="tintColor" red="0.20000000000000001" green="0.47843137250000001" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="stepperValueChanged:" destination="ls1-Gt-slL" eventType="valueChanged" id="v7W-Nt-Jpd"/>
                                         </connections>
                                     </stepper>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-ca-1si">
-                                        <rect key="frame" x="192" y="30" width="42" height="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4Y-ul-Wwa">
+                                        <rect key="frame" x="16" y="218" width="52" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <color key="tintColor" red="0.16078431369999999" green="0.49803921569999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="saveFixed:" destination="ls1-Gt-slL" eventType="touchUpInside" id="9yc-Q0-NTb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVQ-BB-XBi">
+                                        <rect key="frame" x="97" y="217" width="80" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" red="0.85999177630000001" green="0.0" blue="0.0" alpha="0.99617293070000001" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="CANCEL"/>
+                                        <connections>
+                                            <action selector="cancelSettings:" destination="ls1-Gt-slL" eventType="touchUpInside" id="cCg-pg-R2N"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-ca-1si">
+                                        <rect key="frame" x="168" y="178" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7Au-uK-joh" firstAttribute="top" secondItem="XT1-vT-zuE" secondAttribute="bottom" constant="16" id="0Hb-4m-LPn"/>
+                                    <constraint firstItem="Gbr-Gu-Frj" firstAttribute="leading" secondItem="yPw-7F-cEE" secondAttribute="leading" constant="16" id="67R-Pd-zDq"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Au-uK-joh" secondAttribute="bottom" constant="137" id="8oT-U6-PXQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gbr-Gu-Frj" secondAttribute="bottom" constant="93" id="H4y-6D-pYc"/>
+                                    <constraint firstAttribute="trailing" secondItem="XT1-vT-zuE" secondAttribute="trailing" constant="40" id="IgR-cE-Uvc"/>
+                                    <constraint firstItem="uKR-b1-DKw" firstAttribute="leading" secondItem="yPw-7F-cEE" secondAttribute="leading" constant="16" id="NA5-pT-E3C"/>
+                                    <constraint firstAttribute="trailing" secondItem="uKR-b1-DKw" secondAttribute="trailing" constant="249" id="OIx-K0-pfI"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Au-uK-joh" secondAttribute="trailing" constant="44" id="Ual-6K-4ho"/>
+                                    <constraint firstItem="uKR-b1-DKw" firstAttribute="top" secondItem="Gbr-Gu-Frj" secondAttribute="bottom" constant="4" id="f2E-wZ-Qsk"/>
+                                    <constraint firstItem="Gbr-Gu-Frj" firstAttribute="top" secondItem="7Au-uK-joh" secondAttribute="bottom" constant="8" id="hHk-et-BYq"/>
+                                    <constraint firstItem="XT1-vT-zuE" firstAttribute="leading" secondItem="yPw-7F-cEE" secondAttribute="leading" constant="16" id="nZy-vm-UfU"/>
+                                    <constraint firstItem="XT1-vT-zuE" firstAttribute="top" secondItem="yPw-7F-cEE" secondAttribute="top" constant="16" id="nzB-Fd-8Ln"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gbr-Gu-Frj" secondAttribute="trailing" constant="118" id="udJ-kb-Un1"/>
+                                    <constraint firstItem="7Au-uK-joh" firstAttribute="leading" secondItem="yPw-7F-cEE" secondAttribute="leading" constant="16" id="zaE-8I-Cbv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gng-1Q-60e" userLabel="Random Multiplier View">
+                                <rect key="frame" x="8" y="324" width="359" height="265"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" verticalCompressionResistancePriority="751" text="Use this option to play using random multipliers. Set the range of the multipliers below:" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQJ-nv-YAU">
+                                        <rect key="frame" x="16" y="63" width="300" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i57-Pq-rjU">
+                                        <rect key="frame" x="16" y="222" width="52" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <color key="tintColor" red="0.16078431369999999" green="0.49803921569999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="saveRandom:" destination="ls1-Gt-slL" eventType="touchUpInside" id="Pez-1d-YUJ"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha1-4Z-kWG" customClass="RangeSlider" customModule="SwiftRangeSlider">
+                                        <rect key="frame" x="16" y="169" width="311" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lowerValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="upperValue">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="thumbHasShadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="thumbTintColor">
+                                                <color key="value" red="0.16078431369999999" green="0.49803921569999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="thumbBorderThickness">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rangeSliderValueChanged:" destination="ls1-Gt-slL" eventType="valueChanged" id="c6j-FP-1HA"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ke-YA-R4W">
+                                        <rect key="frame" x="296" y="134" width="31" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="4XA-kf-97i"/>
-                                            <constraint firstAttribute="width" constant="42" id="LJ7-0N-afq"/>
+                                            <constraint firstAttribute="width" constant="31" id="L9f-hq-jqC"/>
+                                            <constraint firstAttribute="height" constant="38" id="qRD-yA-Fl0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgr-fC-Y5S">
+                                        <rect key="frame" x="16" y="134" width="31" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="31" id="U6L-MC-sj2"/>
+                                            <constraint firstAttribute="height" constant="38" id="t4A-6C-zWG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Random Multiply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imo-Zc-rel">
+                                        <rect key="frame" x="17" y="24" width="304" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfV-AS-hkT">
+                                        <rect key="frame" x="97" y="222" width="80" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" red="0.85999177630000001" green="0.0" blue="0.0" alpha="0.99617293070000001" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="CANCEL"/>
+                                        <connections>
+                                            <action selector="cancelSettings:" destination="ls1-Gt-slL" eventType="touchUpInside" id="pdp-WO-au4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="uKR-b1-DKw" secondAttribute="bottom" constant="28" id="57Z-Dg-yDj"/>
-                                    <constraint firstItem="uKR-b1-DKw" firstAttribute="leading" secondItem="Gbr-Gu-Frj" secondAttribute="trailing" constant="42" id="EW7-de-W2k"/>
-                                    <constraint firstItem="uKR-b1-DKw" firstAttribute="top" secondItem="XsJ-FQ-yV3" secondAttribute="top" constant="28" id="Qb2-qC-bLT"/>
-                                    <constraint firstItem="ogA-ca-1si" firstAttribute="leading" secondItem="Gbr-Gu-Frj" secondAttribute="trailing" constant="8" id="SJM-Bx-bM2"/>
-                                    <constraint firstAttribute="trailing" secondItem="uKR-b1-DKw" secondAttribute="trailing" constant="21" id="iHL-Du-7uO"/>
-                                    <constraint firstItem="Gbr-Gu-Frj" firstAttribute="top" secondItem="XsJ-FQ-yV3" secondAttribute="top" constant="22" id="kBe-0b-Egp"/>
-                                    <constraint firstItem="ogA-ca-1si" firstAttribute="top" secondItem="XsJ-FQ-yV3" secondAttribute="top" constant="30" id="rM0-G3-33I"/>
-                                    <constraint firstItem="Gbr-Gu-Frj" firstAttribute="leading" secondItem="XsJ-FQ-yV3" secondAttribute="leading" constant="8" id="y3a-M6-7rT"/>
+                                    <constraint firstItem="Dgr-fC-Y5S" firstAttribute="leading" secondItem="gng-1Q-60e" secondAttribute="leading" constant="16" id="1ha-PE-8lc"/>
+                                    <constraint firstItem="ha1-4Z-kWG" firstAttribute="top" secondItem="gng-1Q-60e" secondAttribute="top" constant="169" id="3sn-37-tii"/>
+                                    <constraint firstAttribute="height" constant="265" id="9LU-Em-FWw"/>
+                                    <constraint firstAttribute="bottom" secondItem="GQJ-nv-YAU" secondAttribute="bottom" constant="137" id="NcH-sY-5j7"/>
+                                    <constraint firstAttribute="bottom" secondItem="ha1-4Z-kWG" secondAttribute="bottom" constant="61" id="OTl-zz-Pd6"/>
+                                    <constraint firstAttribute="trailing" secondItem="GQJ-nv-YAU" secondAttribute="trailing" constant="43" id="PXM-71-qR2"/>
+                                    <constraint firstItem="ha1-4Z-kWG" firstAttribute="leading" secondItem="gng-1Q-60e" secondAttribute="leading" constant="16" id="QYp-OC-Lke"/>
+                                    <constraint firstItem="7Ke-YA-R4W" firstAttribute="top" secondItem="gng-1Q-60e" secondAttribute="top" constant="134" id="SGT-4B-soG"/>
+                                    <constraint firstAttribute="trailing" secondItem="ha1-4Z-kWG" secondAttribute="trailing" constant="32" id="Z7h-so-Wk6"/>
+                                    <constraint firstItem="Dgr-fC-Y5S" firstAttribute="top" secondItem="gng-1Q-60e" secondAttribute="top" constant="134" id="ZnO-Wv-qeA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Imo-Zc-rel" secondAttribute="trailing" constant="38" id="dxK-eA-3d5"/>
+                                    <constraint firstItem="GQJ-nv-YAU" firstAttribute="leading" secondItem="gng-1Q-60e" secondAttribute="leading" constant="16" id="edw-xe-YtO"/>
+                                    <constraint firstItem="GQJ-nv-YAU" firstAttribute="top" secondItem="Imo-Zc-rel" secondAttribute="bottom" constant="8" id="lon-WC-VFY"/>
+                                    <constraint firstAttribute="width" constant="359" id="ogc-pJ-KYT"/>
+                                    <constraint firstItem="Imo-Zc-rel" firstAttribute="leading" secondItem="gng-1Q-60e" secondAttribute="leading" constant="17" id="pwq-78-8JG"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Ke-YA-R4W" secondAttribute="trailing" constant="32" id="wQt-wn-ARc"/>
+                                    <constraint firstItem="Imo-Zc-rel" firstAttribute="top" secondItem="gng-1Q-60e" secondAttribute="top" constant="24" id="zo3-1q-V6a"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="U4Y-ul-Wwa" firstAttribute="top" secondItem="XsJ-FQ-yV3" secondAttribute="bottom" constant="101" id="2Mh-4t-LcD"/>
-                            <constraint firstItem="uIo-HK-oCj" firstAttribute="top" secondItem="vt1-b0-LC2" secondAttribute="bottom" constant="82" id="4AH-EF-mJj"/>
-                            <constraint firstItem="uIo-HK-oCj" firstAttribute="leading" secondItem="9yr-Nb-fbi" secondAttribute="leadingMargin" constant="1" id="ACb-s2-DGt"/>
-                            <constraint firstItem="U4Y-ul-Wwa" firstAttribute="centerX" secondItem="9yr-Nb-fbi" secondAttribute="centerX" id="GHf-db-s2q"/>
-                            <constraint firstItem="XsJ-FQ-yV3" firstAttribute="top" secondItem="uIo-HK-oCj" secondAttribute="bottom" constant="33" id="KrT-fD-BE9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uIo-HK-oCj" secondAttribute="trailing" constant="1" id="YMm-vn-bEM"/>
-                            <constraint firstItem="XsJ-FQ-yV3" firstAttribute="leading" secondItem="9yr-Nb-fbi" secondAttribute="leadingMargin" constant="1" id="e31-Ic-Jgb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XsJ-FQ-yV3" secondAttribute="trailing" constant="1" id="gf6-9j-PF1"/>
-                            <constraint firstItem="U4Y-ul-Wwa" firstAttribute="centerY" secondItem="9yr-Nb-fbi" secondAttribute="centerY" constant="63.5" id="r3D-Hb-hAk"/>
+                            <constraint firstItem="yPw-7F-cEE" firstAttribute="centerY" secondItem="9yr-Nb-fbi" secondAttribute="centerY" constant="-150" id="0rj-8S-UYP"/>
+                            <constraint firstItem="yPw-7F-cEE" firstAttribute="leading" secondItem="9yr-Nb-fbi" secondAttribute="leading" constant="8" id="MwV-Y6-6wZ"/>
+                            <constraint firstAttribute="trailing" secondItem="yPw-7F-cEE" secondAttribute="trailing" constant="8" id="Tfx-zg-Eap"/>
+                            <constraint firstItem="gng-1Q-60e" firstAttribute="leading" secondItem="yPw-7F-cEE" secondAttribute="leading" id="Y0i-Dy-NzP"/>
+                            <constraint firstItem="NJU-Yj-1Ym" firstAttribute="top" secondItem="gng-1Q-60e" secondAttribute="bottom" constant="78" id="gBy-Aa-iFz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fixedMultiplier" destination="ogA-ca-1si" id="iPx-nd-kdE"/>
                         <outlet property="fixedMultiplierStepper" destination="uKR-b1-DKw" id="aOq-Gy-luG"/>
-                        <outlet property="randomMultSwitch" destination="WbH-9W-8iK" id="Vb1-yH-vF6"/>
+                        <outlet property="lowerRangeLabel" destination="Dgr-fC-Y5S" id="zrS-Dx-EdW"/>
+                        <outlet property="rangeSlider" destination="ha1-4Z-kWG" id="21B-m5-pgG"/>
+                        <outlet property="rangeSliderOutlet" destination="ha1-4Z-kWG" id="1NI-xa-U5l"/>
+                        <outlet property="upperRangeLabel" destination="7Ke-YA-R4W" id="yjJ-Vl-rzh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMm-XP-ql0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="314.39280359820094"/>
+            <point key="canvasLocation" x="1028" y="315"/>
         </scene>
     </scenes>
     <resources>

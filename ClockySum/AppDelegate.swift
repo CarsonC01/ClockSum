@@ -17,18 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        if let viewWidth = window?.frame.width {
-            
-            if viewWidth == 320.0 {
-                
-                var iPhoneSeView: UIStoryboard!
-                iPhoneSeView = UIStoryboard(name: "iPhoneSE", bundle: nil)
-                let initialViewController: UIViewController = (iPhoneSeView.instantiateInitialViewController())!
-                self.window?.rootViewController = initialViewController
-                self.window?.makeKeyAndVisible()
-
-            }
-        }
+//        if let viewWidth = window?.frame.width {
+//            
+//            if viewWidth == 320.0 {
+//                
+//                var iPhoneSeView: UIStoryboard!
+//                iPhoneSeView = UIStoryboard(name: "iPhoneSE", bundle: nil)
+//                let initialViewController: UIViewController = (iPhoneSeView.instantiateInitialViewController())!
+//                self.window?.rootViewController = initialViewController
+//                self.window?.makeKeyAndVisible()
+//
+//            }
+//        }
         
         return true
     }

@@ -65,16 +65,11 @@ class ClockySum {
             incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer + 15, lowerBound: correctAnswer + 9)
         }
         
-        print(correctAnswer, incorrectAnswer1, incorrectAnswer2)
-        
         // Show Answers in random order
         
         // get random number from 3
         let answersArray = [correctAnswer, incorrectAnswer1, incorrectAnswer2]
         let shuffledAns: [Int] = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: answersArray) as! [Int]
-        print(shuffledAns[0])
-        print(shuffledAns[1])
-        print(shuffledAns[2])
         
         return shuffledAns
         
@@ -88,8 +83,11 @@ class ClockySum {
 func getRandomNumber(upperBound: Int, lowerBound: Int = 0) -> Int {
     
     //let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(in: upperBound)
+    // return Int(arc4random_uniform(UInt32(max - min))) + min
 
-    let randomNum:UInt32 = arc4random_uniform(UInt32(upperBound)) + UInt32(lowerBound)
+    print(upperBound, lowerBound)
+    
+    let randomNum:UInt32 = arc4random_uniform(UInt32(upperBound - lowerBound)) + UInt32(lowerBound)
     let randomNumber:Int = Int(randomNum)
     
     print(randomNumber)

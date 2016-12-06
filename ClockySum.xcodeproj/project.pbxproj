@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D29C0051DF129B000944871 /* UIView.extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D29C0041DF129B000944871 /* UIView.extensions.swift */; };
+		1D2F968C1DF54424007841F9 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F968B1DF54424007841F9 /* InstructionsViewController.swift */; };
 		1D55BC971DD43D2200F1272C /* iPhoneSE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */; };
 		1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893AFC1D864B73006F309C /* AppDelegate.swift */; };
 		1D893B021D864B73006F309C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D893B001D864B73006F309C /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D29C0041DF129B000944871 /* UIView.extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.extensions.swift; sourceTree = "<group>"; };
+		1D2F968B1DF54424007841F9 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneSE.storyboard; sourceTree = "<group>"; };
 		1D893AF91D864B73006F309C /* ClockySum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockySum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D893AFC1D864B73006F309C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D29D15E1DF125A2009FE448 /* View formatting classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D29C0041DF129B000944871 /* UIView.extensions.swift */,
+			);
+			name = "View formatting classes";
+			sourceTree = "<group>";
+		};
 		1D4F6AA61DEE6ED2000DD736 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 			children = (
 				1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */,
 				1D9B91AA1DC7384F00894A42 /* SettingsViewController.swift */,
+				1D2F968B1DF54424007841F9 /* InstructionsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -109,8 +122,9 @@
 		1D4F6AA81DEE6EF8000DD736 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */,
+				1D29D15E1DF125A2009FE448 /* View formatting classes */,
 				1D893B001D864B73006F309C /* Main.storyboard */,
+				1D55BC961DD43D2200F1272C /* iPhoneSE.storyboard */,
 				1D893B051D864B73006F309C /* LaunchScreen.storyboard */,
 			);
 			name = Views;
@@ -384,10 +398,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFFE3931DD40F7F00673739 /* InnerShadow.swift in Sources */,
+				1D29C0051DF129B000944871 /* UIView.extensions.swift in Sources */,
 				1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */,
 				1D893B2D1D880182006F309C /* ClockySumModel.swift in Sources */,
 				1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */,
 				1DFFE3911DD40E5900673739 /* InnerShadowView.swift in Sources */,
+				1D2F968C1DF54424007841F9 /* InstructionsViewController.swift in Sources */,
 				1D9B91AB1DC7384F00894A42 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +547,7 @@
 			baseConfigurationReference = 3C5AE43A53C35526E061E4C5 /* Pods-ClockySum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5ZYKCXQGR3;
 				INFOPLIST_FILE = ClockySum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -538,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,6 +564,7 @@
 			baseConfigurationReference = 768BA1607A97C0DAFF24BE19 /* Pods-ClockySum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5ZYKCXQGR3;
 				INFOPLIST_FILE = ClockySum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -554,7 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Carson.ClockySum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

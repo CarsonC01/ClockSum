@@ -12,6 +12,8 @@ import KCFloatingActionButton
 
 var multiplier: Int = 2
 var randomSwitch: Bool = false
+var randomUpper: Int = 10
+var randomLower: Int = 1
 
 class ClockSumFaceViewController: UIViewController {
     
@@ -50,6 +52,15 @@ class ClockSumFaceViewController: UIViewController {
     @IBOutlet weak var elevenOclockLabel: UILabel!
     @IBOutlet weak var twelveOclockLabel: UILabel!
     
+    //MARK: - IBConstraints
+    
+    @IBOutlet weak var outerImageWidth: NSLayoutConstraint!
+    @IBOutlet weak var outerImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var outerViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var outerViewHeight: NSLayoutConstraint!
+    
+    
+    
     //MARK: - Properties
     var clockNumber: Int = 0
     //var numbersUsed:[Int] = []
@@ -64,14 +75,90 @@ class ClockSumFaceViewController: UIViewController {
         super.viewDidLoad()
         
         speedDialMenu()
-        
-        multiplierLabel.text = "\(multiplier)x"
-        
+        getUserDefaults()
+        //multiplierLabel.text = "\(multiplier)x"
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        adjustConstraintsForType()
+        // Start play...
+        configClockFace()
+        setUpNextPlay()
+        
+    }
+    
+    func adjustConstraintsForType() {
+        
+        if view.frame.width == 320.0 {
+            
+            outerImageWidth.constant = 310
+            outerImageHeight.constant = 310
+            outerViewWidth.constant = 310
+            outerViewHeight.constant = 310
+        }
+    }
+    
+
+    func speedDialMenu() {
+        
+        // Set up Floating Action Button as Speed Dial Menu, using KCFloatingActionButton framework
+        
+        let fab = KCFloatingActionButton()
+        
+        fab.buttonImage = UIImage(named: "Menu")
+        fab.buttonColor = UIColor(red: 31/255.0, green: 125/255.0, blue: 234/255.0, alpha: 1.0)
+        //fab.itemButtonColor = UIColor(red: 50/255.0, green: 149/255.0, blue: 243/255.0, alpha: 1.0)
+        fab.size = 65.0
+        fab.tintColor = UIColor.white
+
+        fab.addItem("Settings", icon: UIImage(named: "Setting")!, handler: { item in
+            
+            self.performSegue(withIdentifier: "settingsSegue", sender: nil)
+            
+            fab.close()
+        })
+        
+        fab.addItem("Reset Scores", icon: UIImage(named: "Reset")!, handler: { item in
+            
+            self.counterCorrect = 0
+            self.counterIncorrect = 0
+            self.correctCounter.text = "Correct: \(self.counterCorrect)"
+            self.incorrectCounter.text = "Incorrect: \(self.counterIncorrect)"
+            
+            fab.close()
+        })
+
+        fab.addItem("Tell a friend", icon: UIImage(named: "Write")!, handler: { item in
+            
+            self.showFeedbackController()
+            
+            fab.close()
+        })
+        
+        fab.addItem("Instructions", icon: UIImage(named: "Info")!, handler: { item in
+            
+            self.performSegue(withIdentifier: "instructionsSegue", sender: nil)
+            
+            fab.close()
+        })
+
+        self.view.addSubview(fab)
+
+    }
+    
+    func showFeedbackController() {
+        
+        let shareText = "Hey why not try out this wonderful new app!"
+        
+        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+        present(vc, animated: true)
+
+    }
+    
+    func getUserDefaults() {
         
         // Get user default settings
         let defaultSettings = UserDefaults.standard
@@ -81,37 +168,20 @@ class ClockSumFaceViewController: UIViewController {
         }
         randomSwitch = defaultSettings.bool(forKey: "userRandomSwitch")
         
-        configClockFace()
-        
-        setUpNextPlay()
-        
-    }
-    
-
-    func speedDialMenu() {
-        
-        let fab = KCFloatingActionButton()
-        //fab.buttonColor = UIColor.blue
-        fab.itemButtonColor = UIColor.brown
-        fab.size = 65.0
-
-        fab.addItem("Settings", icon: UIImage(named: "Settings")!, handler: { item in
-            
-            item.size = 65.0
-            
-            self.performSegue(withIdentifier: "settingsSegue", sender: nil)
-            
-            fab.close()
-        })
-        self.view.addSubview(fab)
+        let userRandomUpper = defaultSettings.integer(forKey: "userRandomUpper")
+        if userRandomUpper > 0 {
+            randomUpper = userRandomUpper
+        }
+        let userRandomLower = defaultSettings.integer(forKey: "userRandomLower")
+        if userRandomLower > 0 {
+            randomLower = userRandomLower
+        }
 
     }
     
     @IBAction func answerTouchDown(_ sender: AnyObject) {
         
         // Check answer, show results, update counters
-        
-        
         
         if let answer = Int((sender.titleLabel??.text)!) {
             
@@ -145,15 +215,18 @@ class ClockSumFaceViewController: UIViewController {
         // set last play clock number color to clear
         setClockNumberColor(number: clockNumber, color: UIColor.clear)
         
+        // get new unused number
         clockNumber = clockySum.handleClockNumbering()
         
         // set background color of clockface number to yellow
         setClockNumberColor(number: clockNumber, color: UIColor.yellow)
         
         if randomSwitch {
-            multiplier = getRandomNumber(upperBound: 10, lowerBound: 2) + 1
+            
+            print(randomUpper, randomLower)
+            
+            multiplier = getRandomNumber(upperBound: randomUpper - 1, lowerBound: randomLower - 1) + 1
         }
-        
         multiplierLabel.text = "\(multiplier)x"
         
         // get the three multiple choice answers including the correct answer
@@ -272,14 +345,15 @@ class ClockSumFaceViewController: UIViewController {
     
     func configClockFace() {
         
-        // Make views round, like a clock face
+        // Make clockface views round & give shadow
+        makeRoundShadow(view: centerView)
+//        makeRoundShadow(view: innerView)
+//        makeRoundShadow(view: outerView)
         
         // Make answer views round & give shadow
-        makeRoundShadow(view: centerView)
         makeRoundShadow(view: answerOneView)
         makeRoundShadow(view: answerTwoView)
         makeRoundShadow(view: answerThreeView)
-        
         
         // Make outer rim clock time Labels round
         makeLabelRound(label: oneOclockLabel)
@@ -294,7 +368,6 @@ class ClockSumFaceViewController: UIViewController {
         makeLabelRound(label: tenOclockLabel)
         makeLabelRound(label: elevenOclockLabel)
         makeLabelRound(label: twelveOclockLabel)
-        
     }
     
     
@@ -310,20 +383,9 @@ class ClockSumFaceViewController: UIViewController {
     }
     
     
-    func makeRoundBorder(view: UIView, border: CGFloat){
-        
-        // Make views round and add border
-        view.layer.borderWidth = border
-        view.layer.masksToBounds = false
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.cornerRadius = view.frame.size.width/2
-        view.clipsToBounds = true
-
-    }
-    
     func makeLabelRound(label: UILabel) {
         
-        // Make outer rim clock time Labels round
+        // Make Labels round
         label.layer.masksToBounds = false
         label.layer.cornerRadius = label.frame.size.width/2
         label.clipsToBounds = true
