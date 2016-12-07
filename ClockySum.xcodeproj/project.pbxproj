@@ -19,8 +19,6 @@
 		1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */; };
 		1D893B2D1D880182006F309C /* ClockySumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D893B2C1D880182006F309C /* ClockySumModel.swift */; };
 		1D9B91AB1DC7384F00894A42 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B91AA1DC7384F00894A42 /* SettingsViewController.swift */; };
-		1DFFE3911DD40E5900673739 /* InnerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFE3901DD40E5900673739 /* InnerShadowView.swift */; };
-		1DFFE3931DD40F7F00673739 /* InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFE3921DD40F7F00673739 /* InnerShadow.swift */; };
 		46489F58B702CEB3EFBAFB89 /* Pods_ClockySum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F9FA36C48D49CDA09F80E /* Pods_ClockySum.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +58,6 @@
 		1D893B2A1D8650C0006F309C /* ClockSumFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockSumFaceViewController.swift; sourceTree = "<group>"; };
 		1D893B2C1D880182006F309C /* ClockySumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockySumModel.swift; sourceTree = "<group>"; };
 		1D9B91AA1DC7384F00894A42 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		1DFFE3901DD40E5900673739 /* InnerShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerShadowView.swift; sourceTree = "<group>"; };
-		1DFFE3921DD40F7F00673739 /* InnerShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerShadow.swift; sourceTree = "<group>"; };
 		3C5AE43A53C35526E061E4C5 /* Pods-ClockySum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClockySum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClockySum/Pods-ClockySum.debug.xcconfig"; sourceTree = "<group>"; };
 		768BA1607A97C0DAFF24BE19 /* Pods-ClockySum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClockySum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClockySum/Pods-ClockySum.release.xcconfig"; sourceTree = "<group>"; };
 		848F9FA36C48D49CDA09F80E /* Pods_ClockySum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClockySum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,8 +165,6 @@
 				1D4F6AA81DEE6EF8000DD736 /* Views */,
 				1D4F6AA71DEE6EDB000DD736 /* Controllers */,
 				1D4F6AA91DEE6F65000DD736 /* Utilities */,
-				1DFFE3901DD40E5900673739 /* InnerShadowView.swift */,
-				1DFFE3921DD40F7F00673739 /* InnerShadow.swift */,
 			);
 			path = ClockySum;
 			sourceTree = "<group>";
@@ -397,12 +391,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DFFE3931DD40F7F00673739 /* InnerShadow.swift in Sources */,
 				1D29C0051DF129B000944871 /* UIView.extensions.swift in Sources */,
 				1D893B2B1D8650C0006F309C /* ClockSumFaceViewController.swift in Sources */,
 				1D893B2D1D880182006F309C /* ClockySumModel.swift in Sources */,
 				1D893AFD1D864B73006F309C /* AppDelegate.swift in Sources */,
-				1DFFE3911DD40E5900673739 /* InnerShadowView.swift in Sources */,
 				1D2F968C1DF54424007841F9 /* InstructionsViewController.swift in Sources */,
 				1D9B91AB1DC7384F00894A42 /* SettingsViewController.swift in Sources */,
 			);

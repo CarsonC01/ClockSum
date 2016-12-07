@@ -16,19 +16,11 @@ class SettingsViewController: UIViewController {
     //@IBOutlet weak var randomMultSwitch: UISwitch!
     
     @IBOutlet weak var fixedMultiplier: UILabel!
-    
     @IBOutlet weak var fixedMultiplierStepper: UIStepper!
-    
     @IBOutlet weak var rangeSlider: RangeSlider!
-    
     @IBOutlet weak var lowerRangeLabel: UILabel!
-    
     @IBOutlet weak var upperRangeLabel: UILabel!
-    
     @IBOutlet weak var rangeSliderOutlet: RangeSlider!
-    
-    
-    
     
     //MARK: - Properties
     
@@ -106,20 +98,6 @@ class SettingsViewController: UIViewController {
     }
     
     func saveUserDefaults() {
-        
-//        let userDefaultsDict: [String: AnyObject] =
-//                                ["multiplier": multiplier as AnyObject,
-//                                "randomSwitch": randomSwitch as AnyObject,
-//                                "randomUpper": randomUpper as AnyObject,
-//                                "randomLower": randomLower as AnyObject
-//                                ]
-//        
-//        print(userDefaultsDict)
-        print(multiplier)
-        print(randomSwitch)
-        print(randomUpper)
-        print(randomLower)
-        
         // Save settings
         let defaultSettings = UserDefaults.standard
 

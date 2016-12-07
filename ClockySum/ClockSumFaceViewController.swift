@@ -53,20 +53,33 @@ class ClockSumFaceViewController: UIViewController {
     @IBOutlet weak var twelveOclockLabel: UILabel!
     
     //MARK: - IBConstraints
-    
     @IBOutlet weak var outerImageWidth: NSLayoutConstraint!
     @IBOutlet weak var outerImageHeight: NSLayoutConstraint!
     @IBOutlet weak var outerViewWidth: NSLayoutConstraint!
     @IBOutlet weak var outerViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var outerCircleY: NSLayoutConstraint!
+    
+    @IBOutlet weak var elevenTop: NSLayoutConstraint!
+    @IBOutlet weak var elevenX: NSLayoutConstraint!
+    @IBOutlet weak var tenLeading: NSLayoutConstraint!
+    @IBOutlet weak var tenY: NSLayoutConstraint!
+    @IBOutlet weak var oneTop: NSLayoutConstraint!
+    @IBOutlet weak var oneX: NSLayoutConstraint!
+    @IBOutlet weak var twoTrailing: NSLayoutConstraint!
+    @IBOutlet weak var twoY: NSLayoutConstraint!
+    @IBOutlet weak var fourTrailing: NSLayoutConstraint!
+    @IBOutlet weak var fourY: NSLayoutConstraint!
+    @IBOutlet weak var fiveBottom: NSLayoutConstraint!
+    @IBOutlet weak var fiveX: NSLayoutConstraint!
+    @IBOutlet weak var sevenBottom: NSLayoutConstraint!
+    @IBOutlet weak var sevenX: NSLayoutConstraint!
+    @IBOutlet weak var eightLeading: NSLayoutConstraint!
+    @IBOutlet weak var eightY: NSLayoutConstraint!
     
     
     //MARK: - Properties
     var clockNumber: Int = 0
-    //var numbersUsed:[Int] = []
-//    var correctAnswer: Int = 0
-//    var incorrectAnswer1: Int = 0
-//    var incorrectAnswer2: Int = 0
     var counterCorrect: Int = 0
     var counterIncorrect: Int = 0
     let clockySum = ClockySum()
@@ -74,9 +87,10 @@ class ClockSumFaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // do initial set up
         speedDialMenu()
         getUserDefaults()
-        //multiplierLabel.text = "\(multiplier)x"
+    
     }
     
     
@@ -92,12 +106,35 @@ class ClockSumFaceViewController: UIViewController {
     
     func adjustConstraintsForType() {
         
+        // Set constraints for IPhone SE screen size
         if view.frame.width == 320.0 {
             
-            outerImageWidth.constant = 310
-            outerImageHeight.constant = 310
-            outerViewWidth.constant = 310
-            outerViewHeight.constant = 310
+            outerImageWidth.constant = 320
+            outerImageHeight.constant = 320
+            outerViewWidth.constant = 320
+            outerViewHeight.constant = 320
+            outerCircleY.constant = -80
+            
+            // set clockface numbers positions
+            oneX.constant = 61
+            oneTop.constant = 27
+            twoY.constant = -61
+            twoTrailing.constant = 27
+            
+            fourY.constant = 61
+            fourTrailing.constant = 27
+            fiveX.constant = 61
+            fiveBottom.constant = 27
+            
+            sevenX.constant = -61
+            sevenBottom.constant = 27
+            eightY.constant = 61
+            eightLeading.constant = 27
+            
+            elevenX.constant = -61
+            elevenTop.constant = 27
+            tenY.constant = -61
+            tenLeading.constant = 27
         }
     }
     
@@ -110,10 +147,15 @@ class ClockSumFaceViewController: UIViewController {
         
         fab.buttonImage = UIImage(named: "Menu")
         fab.buttonColor = UIColor(red: 31/255.0, green: 125/255.0, blue: 234/255.0, alpha: 1.0)
-        //fab.itemButtonColor = UIColor(red: 50/255.0, green: 149/255.0, blue: 243/255.0, alpha: 1.0)
-        fab.size = 65.0
+        
+        // if view is larger than IphoneSE width increase size of fab
+        if view.frame.width > 320.0 {
+            fab.size = 65.0
+        }
+        
         fab.tintColor = UIColor.white
 
+        
         fab.addItem("Settings", icon: UIImage(named: "Setting")!, handler: { item in
             
             self.performSegue(withIdentifier: "settingsSegue", sender: nil)
@@ -133,14 +175,14 @@ class ClockSumFaceViewController: UIViewController {
 
         fab.addItem("Tell a friend", icon: UIImage(named: "Write")!, handler: { item in
             
-            self.showFeedbackController()
+            self.showTellAFriend()
             
             fab.close()
         })
         
         fab.addItem("Instructions", icon: UIImage(named: "Info")!, handler: { item in
             
-            self.performSegue(withIdentifier: "instructionsSegue", sender: nil)
+            self.performSegue(withIdentifier: "instSegue", sender: nil)
             
             fab.close()
         })
@@ -149,18 +191,20 @@ class ClockSumFaceViewController: UIViewController {
 
     }
     
-    func showFeedbackController() {
+    func showTellAFriend() {
         
-        let shareText = "Hey why not try out this wonderful new app!"
-        
-        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
-        present(vc, animated: true)
-
+        let shareText = "Hi, try this new app, it's a fun way to build math skills!"
+        if let appURL = NSURL(string: "https://itunes.apple.com/app/id1182293244") {
+            
+            let vc = UIActivityViewController(activityItems: [shareText, appURL], applicationActivities: [])
+            present(vc, animated: true)
+            
+        }
     }
     
     func getUserDefaults() {
         
-        // Get user default settings
+        // Get and set up user default settings
         let defaultSettings = UserDefaults.standard
         let userMultiplier = defaultSettings.integer(forKey: "userMultiplier")
         if userMultiplier > 0 {
@@ -176,7 +220,7 @@ class ClockSumFaceViewController: UIViewController {
         if userRandomLower > 0 {
             randomLower = userRandomLower
         }
-
+        
     }
     
     @IBAction func answerTouchDown(_ sender: AnyObject) {
@@ -237,77 +281,6 @@ class ClockSumFaceViewController: UIViewController {
         answerThree.setTitle(String(describing: shuffledAns[2]), for: .normal)
 
     }
-    
-        
-    
-//    func handleClockNumbering() -> Int {
-//        
-//        // remove last play number color = set last play clockface number color to default
-//        setClockNumberColor(number: clockNumber, color: UIColor.clear)
-//        
-//        // clear numbersUsed after three goes,  so can keep on playing indefinitely. Just avoids same numbers one after each other
-//        if numbersUsed.count > 7 {
-//            numbersUsed.removeAll()
-//        }
-//        
-//        // get random number 1 - 12 for clock face. +1 to avoid zero numbering on clock face
-//        clockNumber = getRandomNumber(upperBound: 12) + 1
-//        
-//        
-//        // get a new number that hasn't been used before
-//        while numbersUsed.contains(clockNumber) && numbersUsed.count < 12 {
-//            // get random number 1 - 12 for clock face
-//            clockNumber = getRandomNumber(upperBound: 12) + 1
-//        }
-//        
-//        print(numbersUsed)
-//        print(numbersUsed.count)
-//        
-//        
-//        if numbersUsed.count < 12 {
-//            // add to last numbers array for checking that number has not already been used
-//            numbersUsed.append(clockNumber)
-//            
-//            // set background color of clockface number to yellow
-//            setClockNumberColor(number: clockNumber, color: UIColor.yellow)
-//            
-//        }
-//        
-//        return clockNumber
-//        
-//    }
-    
-    
-//    func handleAnswers(clockNumber: Int) {
-//        
-//        correctAnswer = clockNumber * multiplier
-//        
-//        // Create two incorrect answers
-//        
-//        incorrectAnswer1 = getRandomNumber(upperBound: correctAnswer + 8, lowerBound: correctAnswer + 2)
-//        if correctAnswer > 2 {
-//            incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer - 1, lowerBound: 1)
-//        } else {
-//            incorrectAnswer2 = getRandomNumber(upperBound: correctAnswer + 15, lowerBound: correctAnswer + 9)
-//        }
-//        
-//        print(correctAnswer, incorrectAnswer1, incorrectAnswer2)
-//        
-//        // Show Answers in random order
-//        
-//        // get random number from 3
-//        let answersArray = [correctAnswer, incorrectAnswer1, incorrectAnswer2]
-//        let shuffledAns = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: answersArray)
-//        print(shuffledAns[0])
-//        print(shuffledAns[1])
-//        print(shuffledAns[2])
-//        
-//        answerOne.setTitle(String(describing: shuffledAns[0]), for: .normal)
-//        answerTwo.setTitle(String(describing: shuffledAns[1]), for: .normal)
-//        answerThree.setTitle(String(describing: shuffledAns[2]), for: .normal
-//        )
-//        
-//    }
     
     
     func setClockNumberColor(number: Int, color: UIColor) {
