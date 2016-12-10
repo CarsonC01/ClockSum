@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,18 +20,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OuterCircleShaded" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-ym-cW7">
-                                <rect key="frame" x="-30" y="16.5" width="380" height="380"/>
+                                <rect key="frame" x="-2.5" y="66" width="380" height="380"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="380" id="1aa-Ia-Z29"/>
                                     <constraint firstAttribute="height" constant="380" id="DVV-0g-hqD"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-nU-8x9" userLabel="Clock View">
-                                <rect key="frame" x="-25" y="13.5" width="370" height="370"/>
+                                <rect key="frame" x="2.5" y="63" width="370" height="370"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twb-hw-g2S">
                                         <rect key="frame" x="160" y="11" width="50" height="50"/>
@@ -143,7 +143,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keI-dG-nrv" customClass="InnerShadowView" customModule="ClockySum" customModuleProvider="target">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keI-dG-nrv">
                                         <rect key="frame" x="72" y="72" width="226" height="226"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-t7-mdI">
@@ -237,22 +237,22 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAF-bn-7GC">
-                                <rect key="frame" x="230.5" y="20" width="73.5" height="19.5"/>
+                                <rect key="frame" x="285.5" y="20" width="73.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-Pu-8Wu">
-                                <rect key="frame" x="220" y="40.5" width="84" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Incorrect: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-Pu-8Wu">
+                                <rect key="frame" x="275" y="40.5" width="84" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Arc-yU-IxX" userLabel="Answers View">
-                                <rect key="frame" x="-1" y="383.5" width="321" height="109"/>
+                                <rect key="frame" x="0.0" y="433" width="375" height="109"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEl-bH-0ur">
-                                        <rect key="frame" x="18" y="8" width="90" height="90"/>
+                                        <rect key="frame" x="45" y="8" width="90" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toA-7G-f42">
                                                 <rect key="frame" x="0.0" y="5" width="90" height="80"/>
@@ -280,7 +280,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vt-Ux-9eQ">
-                                        <rect key="frame" x="116" y="9" width="89.5" height="90"/>
+                                        <rect key="frame" x="143" y="9" width="90" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGB-Dm-50o">
                                                 <rect key="frame" x="5" y="5" width="80" height="80"/>
@@ -305,7 +305,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuM-Fa-WHE">
-                                        <rect key="frame" x="213.5" y="9" width="90" height="90"/>
+                                        <rect key="frame" x="241" y="9" width="90" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zR-RC-9I3">
                                                 <rect key="frame" x="5" y="5" width="80" height="80"/>
@@ -350,14 +350,15 @@
                             <constraint firstAttribute="trailing" secondItem="Arc-yU-IxX" secondAttribute="trailing" id="8Ze-0B-Mpl"/>
                             <constraint firstItem="YAF-bn-7GC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8bU-vk-5TK"/>
                             <constraint firstItem="hj5-ym-cW7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BvQ-gc-ECC"/>
-                            <constraint firstItem="Arc-yU-IxX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-1" id="CoY-5u-01W"/>
+                            <constraint firstItem="Arc-yU-IxX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CoY-5u-01W"/>
                             <constraint firstItem="Arc-yU-IxX" firstAttribute="top" secondItem="bEk-nU-8x9" secondAttribute="bottom" id="IFC-cb-Vr4"/>
+                            <constraint firstItem="bEk-nU-8x9" firstAttribute="top" secondItem="H3u-Pu-8Wu" secondAttribute="bottom" constant="3" id="JgY-bv-TXe"/>
                             <constraint firstItem="H3u-Pu-8Wu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JpR-Mz-OGq"/>
-                            <constraint firstItem="bEk-nU-8x9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-85.5" id="LI3-i8-zHp"/>
-                            <constraint firstItem="hj5-ym-cW7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-77.5" id="WZg-7q-L1H"/>
                             <constraint firstItem="YAF-bn-7GC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aXF-wb-K8M"/>
                             <constraint firstItem="bEk-nU-8x9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dEn-Wp-DLt"/>
+                            <constraint firstItem="bEk-nU-8x9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="ddc-SM-9rF"/>
                             <constraint firstItem="H3u-Pu-8Wu" firstAttribute="top" secondItem="YAF-bn-7GC" secondAttribute="bottom" constant="1" id="mCB-eP-nmQ"/>
+                            <constraint firstItem="hj5-ym-cW7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="wXC-Qj-heZ"/>
                             <constraint firstItem="bEk-nU-8x9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJJ-d2-ekF"/>
                         </constraints>
                         <variation key="default">
@@ -395,7 +396,6 @@
                         <outlet property="oneOclockLabel" destination="FA3-o5-7ed" id="frR-JF-9r8"/>
                         <outlet property="oneTop" destination="ScH-KJ-hTt" id="Z4s-A1-pa3"/>
                         <outlet property="oneX" destination="hJj-mw-l6c" id="LA6-jY-rQ8"/>
-                        <outlet property="outerCircleY" destination="WZg-7q-L1H" id="nsP-No-w34"/>
                         <outlet property="outerImageHeight" destination="DVV-0g-hqD" id="1Ey-5C-yk8"/>
                         <outlet property="outerImageWidth" destination="1aa-Ia-Z29" id="pFF-ku-IC1"/>
                         <outlet property="outerView" destination="bEk-nU-8x9" id="klV-kl-0PJ"/>
@@ -430,21 +430,24 @@
                         <viewControllerLayoutGuide type="bottom" id="jI9-UI-lEl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bwb-Hp-eEY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtW-CJ-fdj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2X-cO-DqR">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA1-xa-zQU">
-                                                <rect key="frame" x="24" y="100" width="272" height="841.5"/>
+                                                <rect key="frame" x="24" y="100" width="272" height="1196"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="272" id="WS5-lL-CJm"/>
                                                 </constraints>
-                                                <string key="text">You can play two games with ClockySum:
+                                                <string key="text">To play, multiply the number highlighted in yellow in the outer clock face, by the central number. Select your answer by pressing the button below that contains the correct answer.
+The central number will turn green or red depending on your answer being correct or incorrect. Your score is kept in the top right hand corner. Scores can be reset, by pressing the menu button in the bottom right hand corner and selecting reset.
+               
+You can play two games with ClockySum:
         
 1. Play using a Fixed Multiplier. Go to Settings, set the number that you would like to multiply the twelve clock face numbers by and press save. This game is best when first learning how to multiply by a new number.
 
@@ -464,8 +467,8 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ow-0v-heY">
-                                                <rect key="frame" x="231.5" y="42" width="65.5" height="32"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ow-0v-heY">
+                                                <rect key="frame" x="265" y="42" width="32" height="32"/>
                                                 <state key="normal" image="Cancel"/>
                                                 <connections>
                                                     <action selector="closeAction:" destination="oMB-xq-EJC" eventType="touchUpInside" id="aNy-qJ-MeQ"/>
@@ -522,14 +525,14 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                         <viewControllerLayoutGuide type="bottom" id="NJU-Yj-1Ym"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9yr-Nb-fbi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gng-1Q-60e" userLabel="Random Multiplier View">
-                                <rect key="frame" x="8" y="310" width="304" height="238"/>
+                                <rect key="frame" x="8" y="359.5" width="359" height="287.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i57-Pq-rjU">
-                                        <rect key="frame" x="16" y="187" width="52" height="35"/>
+                                        <rect key="frame" x="16" y="236.5" width="52" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                         <color key="tintColor" red="0.16078431369999999" green="0.49803921569999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -539,7 +542,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha1-4Z-kWG" customClass="RangeSlider" customModule="SwiftRangeSlider">
-                                        <rect key="frame" x="17" y="153" width="256" height="35"/>
+                                        <rect key="frame" x="17" y="202.5" width="311" height="35"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="u0U-Pe-XqV"/>
@@ -573,7 +576,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgr-fC-Y5S">
-                                        <rect key="frame" x="17" y="118" width="31" height="38"/>
+                                        <rect key="frame" x="17" y="167.5" width="31" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="31" id="U6L-MC-sj2"/>
                                             <constraint firstAttribute="height" constant="38" id="t4A-6C-zWG"/>
@@ -583,7 +586,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfV-AS-hkT">
-                                        <rect key="frame" x="91" y="187" width="80" height="36"/>
+                                        <rect key="frame" x="91" y="236.5" width="80" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" red="0.85999177630000001" green="0.0" blue="0.0" alpha="0.99617293070000001" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="CANCEL"/>
@@ -604,7 +607,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ke-YA-R4W">
-                                        <rect key="frame" x="242" y="118" width="31" height="38"/>
+                                        <rect key="frame" x="297" y="167.5" width="31" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="31" id="L9f-hq-jqC"/>
                                             <constraint firstAttribute="height" constant="38" id="qRD-yA-Fl0"/>
@@ -649,10 +652,10 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPw-7F-cEE" userLabel="Fixed Multiplier View">
-                                <rect key="frame" x="8" y="48" width="304" height="245"/>
+                                <rect key="frame" x="8" y="48" width="359" height="294.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Fixed Multiply " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-vT-zuE">
-                                        <rect key="frame" x="16" y="16" width="303" height="29.5"/>
+                                        <rect key="frame" x="16" y="16" width="358" height="30.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -664,14 +667,14 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="uKR-b1-DKw">
-                                        <rect key="frame" x="17" y="157.5" width="94" height="29"/>
+                                        <rect key="frame" x="17" y="207.5" width="94" height="29"/>
                                         <color key="tintColor" red="0.20000000000000001" green="0.47843137250000001" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="stepperValueChanged:" destination="ls1-Gt-slL" eventType="valueChanged" id="v7W-Nt-Jpd"/>
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4Y-ul-Wwa">
-                                        <rect key="frame" x="16" y="194" width="52" height="35"/>
+                                        <rect key="frame" x="16" y="243.5" width="52" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                         <color key="tintColor" red="0.16078431369999999" green="0.49803921569999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -681,7 +684,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVQ-BB-XBi">
-                                        <rect key="frame" x="92" y="193" width="80" height="36"/>
+                                        <rect key="frame" x="92" y="242.5" width="80" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" red="0.85999177630000001" green="0.0" blue="0.0" alpha="0.99617293070000001" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="CANCEL"/>
@@ -690,7 +693,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-ca-1si">
-                                        <rect key="frame" x="160" y="155.5" width="42" height="27.5"/>
+                                        <rect key="frame" x="215" y="204.5" width="42" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="7dI-O2-Ppt"/>
                                         </constraints>
@@ -699,7 +702,7 @@ Please remember to have fun, take your time and you will learn. Enjoy!
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Fixed Multiplier:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-Gu-Frj">
-                                        <rect key="frame" x="16" y="126" width="280" height="24"/>
+                                        <rect key="frame" x="16" y="175.5" width="335" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

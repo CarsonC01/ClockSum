@@ -27,8 +27,8 @@ class ClockSumFaceViewController: UIViewController {
     @IBOutlet weak var answerThreeView: UIView!
     
     
-    @IBOutlet weak var resultsView: UIView!
-    @IBOutlet weak var resultLabel: UILabel!
+//    @IBOutlet weak var resultsView: UIView!
+//    @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var correctCounter: UILabel!
     @IBOutlet weak var incorrectCounter: UILabel!
@@ -58,7 +58,7 @@ class ClockSumFaceViewController: UIViewController {
     @IBOutlet weak var outerViewWidth: NSLayoutConstraint!
     @IBOutlet weak var outerViewHeight: NSLayoutConstraint!
     
-    @IBOutlet weak var outerCircleY: NSLayoutConstraint!
+    //@IBOutlet weak var outerCircleY: NSLayoutConstraint!
     
     @IBOutlet weak var elevenTop: NSLayoutConstraint!
     @IBOutlet weak var elevenX: NSLayoutConstraint!
@@ -113,7 +113,6 @@ class ClockSumFaceViewController: UIViewController {
             outerImageHeight.constant = 320
             outerViewWidth.constant = 320
             outerViewHeight.constant = 320
-            outerCircleY.constant = -80
             
             // set clockface numbers positions
             oneX.constant = 61
@@ -136,6 +135,12 @@ class ClockSumFaceViewController: UIViewController {
             tenY.constant = -61
             tenLeading.constant = 27
         }
+        
+        // Set constraints for IPad screen sizes
+        
+        print(view.frame.width)
+
+        
     }
     
 
