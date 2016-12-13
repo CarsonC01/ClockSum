@@ -9,6 +9,7 @@
 import UIKit
 import GameKit
 import KCFloatingActionButton
+import DeviceKit
 
 var multiplier: Int = 2
 var randomSwitch: Bool = false
@@ -58,7 +59,10 @@ class ClockSumFaceViewController: UIViewController {
     @IBOutlet weak var outerViewWidth: NSLayoutConstraint!
     @IBOutlet weak var outerViewHeight: NSLayoutConstraint!
     
-    //@IBOutlet weak var outerCircleY: NSLayoutConstraint!
+    @IBOutlet weak var buttonHeight: NSLayoutConstraint!
+    @IBOutlet weak var buttonWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var answersTopToClockBt: NSLayoutConstraint!
     
     @IBOutlet weak var elevenTop: NSLayoutConstraint!
     @IBOutlet weak var elevenX: NSLayoutConstraint!
@@ -83,6 +87,7 @@ class ClockSumFaceViewController: UIViewController {
     var counterCorrect: Int = 0
     var counterIncorrect: Int = 0
     let clockySum = ClockySum()
+    let device = Device()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,17 +102,24 @@ class ClockSumFaceViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        adjustConstraintsForType()
+        //adjustConstraintsForType()
         // Start play...
         configClockFace()
         setUpNextPlay()
         
     }
     
+    override func viewWillLayoutSubviews() {
+        adjustConstraintsForType()
+    }
+    
     func adjustConstraintsForType() {
         
+        let iPhone5Types: [Device] = [.iPhone5, .iPhoneSE, .iPhone5s, .iPhone5c, .simulator(.iPhone5), .simulator(.iPhoneSE), .simulator(.iPhone5s), .simulator(.iPhone5c)]
+        
         // Set constraints for IPhone SE screen size
-        if view.frame.width == 320.0 {
+        
+        if device.isOneOf(iPhone5Types) {
             
             outerImageWidth.constant = 320
             outerImageHeight.constant = 320
@@ -134,9 +146,33 @@ class ClockSumFaceViewController: UIViewController {
             elevenTop.constant = 27
             tenY.constant = -61
             tenLeading.constant = 27
+            
+        } else if device.isPad {
+            
+            // Set text size for Ipad layout
+            
+            print(device.description)
+            
+            answerOne.titleLabel?.font =  UIFont(name: (answerOne.titleLabel?.font.fontName)!, size: 60)
+            answerTwo.titleLabel?.font = UIFont(name: (answerTwo.titleLabel?.font.fontName)!,
+                size: 60)
+            answerThree.titleLabel?.font = UIFont(name: (answerThree.titleLabel?.font.fontName)!, size: 60)
+            
+            oneOclockLabel.font = UIFont(name: (oneOclockLabel.font.fontName), size: 52)
+            twoOclockLabel.font = UIFont(name: (twoOclockLabel.font.fontName), size: 52)
+            threeOclockLabel.font = UIFont(name: (threeOclockLabel.font.fontName), size: 52)
+            fourOclockLabel.font = UIFont(name: (fourOclockLabel.font.fontName), size: 52)
+            fiveOclockLabel.font = UIFont(name: (fiveOclockLabel.font.fontName), size: 52)
+            sixOclockLabel.font = UIFont(name: (sixOclockLabel.font.fontName), size: 52)
+            sevenOclockLabel.font = UIFont(name: (sevenOclockLabel.font.fontName), size: 52)
+            eightOclockLabel.font = UIFont(name: (eightOclockLabel.font.fontName), size: 52)
+            nineOclockLabel.font = UIFont(name: (nineOclockLabel.font.fontName), size: 52)
+            tenOclockLabel.font = UIFont(name: (tenOclockLabel.font.fontName), size: 52)
+            elevenOclockLabel.font = UIFont(name: (elevenOclockLabel.font.fontName), size: 52)
+            twelveOclockLabel.font = UIFont(name: (twelveOclockLabel.font.fontName), size: 52)
+        
         }
         
-        // Set constraints for IPad screen sizes
         
         print(view.frame.width)
 
@@ -156,6 +192,12 @@ class ClockSumFaceViewController: UIViewController {
         // if view is larger than IphoneSE width increase size of fab
         if view.frame.width > 320.0 {
             fab.size = 65.0
+        }
+        if view.frame.width == 320.0 {
+            fab.size = 45.0
+            fab.paddingY = 5.0
+            fab.paddingX = 5.0
+
         }
         
         fab.tintColor = UIColor.white
@@ -202,6 +244,8 @@ class ClockSumFaceViewController: UIViewController {
         if let appURL = NSURL(string: "https://itunes.apple.com/app/id1182293244") {
             
             let vc = UIActivityViewController(activityItems: [shareText, appURL], applicationActivities: [])
+            
+            vc.popoverPresentationController?.sourceView = view
             present(vc, animated: true)
             
         }

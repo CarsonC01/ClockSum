@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftRangeSlider
+import DeviceKit
 
 class SettingsViewController: UIViewController {
     
@@ -22,10 +23,25 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var upperRangeLabel: UILabel!
     @IBOutlet weak var rangeSliderOutlet: RangeSlider!
     
+    
+    @IBOutlet weak var playFixedTitle: UILabel!
+    @IBOutlet weak var playFixedText: UILabel!
+    @IBOutlet weak var setFixedText: UILabel!
+    @IBOutlet weak var playFixedSave: UIButton!
+    @IBOutlet weak var playFixedCancel: UIButton!
+    
+    @IBOutlet weak var playRandomTitle: UILabel!
+    @IBOutlet weak var playRandomText: UILabel!
+    @IBOutlet weak var playRandomSave: UIButton!
+    @IBOutlet weak var playRandomCancel: UIButton!
+    
+    
+    
     //MARK: - Properties
     
     var userMultiplier: Int = 0
     var userRandomSet: Bool = false
+    let device = Device()
     
 
     override func viewDidLoad() {
@@ -52,6 +68,34 @@ class SettingsViewController: UIViewController {
 
         }
             
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        if device.isPad {
+            
+            // Set text size for Ipad layout
+            
+            print(device.description)
+        
+            playFixedTitle.font = UIFont(name: (playFixedTitle.font.fontName), size: 52)
+            playFixedText.font = UIFont(name: (playFixedText.font.fontName), size: 36)
+            setFixedText.font = UIFont(name: (setFixedText.font.fontName), size: 40)
+            fixedMultiplier.font = UIFont(name: (fixedMultiplier.font.fontName), size: 46)
+            
+            playRandomTitle.font = UIFont(name: (playRandomTitle.font.fontName), size: 52)
+            playRandomText.font = UIFont(name: (playRandomText.font.fontName), size: 36)
+            
+            playFixedSave.titleLabel?.font =  UIFont(name:(playFixedSave.titleLabel?.font.fontName)!, size: 40)
+            playFixedCancel.titleLabel?.font = UIFont(name:
+                (playFixedCancel.titleLabel?.font.fontName)!, size: 40)
+            
+            playRandomSave.titleLabel?.font =  UIFont(name:(playRandomSave.titleLabel?.font.fontName)!, size: 40)
+            playRandomCancel.titleLabel?.font = UIFont(name:
+                (playRandomCancel.titleLabel?.font.fontName)!, size: 40)
+
+        }
+        
     }
     
     override func viewDidLayoutSubviews() {
